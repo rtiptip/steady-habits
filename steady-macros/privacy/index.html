@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adaptive Macro Coach — Privacy policy (draft)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.5; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; }
+    .draft { background: #fff4d6; border: 1px solid #e0c36a; padding: 0.75rem 1rem; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+  </style>
+</head>
+<body>
+  <p class="draft"><strong>Draft — pending operator approval.</strong> This page describes what the app does today. It is not legal advice and it is not a finished privacy policy.</p>
+  <h1>Adaptive Macro Coach privacy policy</h1>
+  <p>This page describes what the app does today. It is general wellness information, not medical advice, not a diagnosis, and not treatment. It is not a HIPAA notice, and the app does not claim HIPAA compliance.</p>
+  <p>Questions about this page: use the contact on the app's store listing. This draft does not publish an email address or a website of its own.</p>
+
+  <h2>Account</h2>
+  <p>Sign-in is Supabase Auth. You can create an account with an email and a password. A build that is set up for it can also offer Google or Apple sign-in. The phone keeps the sign-in session in encrypted storage on the device. Signing out leaves your saved plan and logs on the server. It leaves the encrypted baseline history and the pending-save file on the phone. It removes the downloaded copy of your data and this account's cached today's calorie target. Opening the app removes a downloaded copy left from an earlier session. Opening the app while signed out also removes a cached today's calorie target left on the phone.</p>
+
+  <h2>Plan and targets</h2>
+  <p>A preview of a plan is not stored. When you save a plan, the server stores the answers on that form and the calculated targets. Those answers include date of birth, height, weight, goal, activity, timezone, and the safety questions (pregnancy, breastfeeding, eating-disorder treatment, and medical nutrition therapy). An equation that needs it also stores sex or a body-fat percent. A plan you type yourself stores the protein, carbohydrate, and fat you enter. Each save stores that you accepted the general-wellness consent shown in the app. Earlier revisions stay on the server. The phone keeps an encrypted copy of those inputs, not the calculated result, in an app-private file that is excluded from backup.</p>
+  <p>Before a save is sent, the phone writes that frozen request to an encrypted pending-save file. The file holds no password and no calculated result. Ordinary sign-out keeps the file so the same account can finish the save. The app deletes it after the save outcome is confirmed. A confirmed account deletion removes that account's pending-save file, the encrypted input history, and the other on-device records listed under Deletion. If the phone cannot finish that local cleanup, it says so and keeps the history locked until cleanup completes.</p>
+
+  <h2>Food log and saved meals</h2>
+  <p>Foods you add are stored on the server under your account. A saved meal is stored there too. The first time you log food, the app says so: foods you add stay until you delete them, your searches are not stored, and nothing about your food is kept on this phone. You can delete one entry, delete one saved meal, or use Settings → Delete all food logs. Delete all removes every food log entry and every saved meal. It does not delete your plan or your weight log.</p>
+  <p>Search text is sent to the server, which asks USDA FoodData Central. The server does not store, log, or echo the query. USDA sees the server's address and the search text, not who searched. A barcode lookup sends the barcode number to the server, which asks USDA and then Open Food Facts. That lookup stores nothing. USDA and Open Food Facts see the server's address and the barcode, not who scanned it. Camera frames stay on the phone and are not uploaded.</p>
+  <p>The barcode scanner uses Google ML Kit. ML Kit can send Google anonymous metrics about the scanner: device model and OS version, app name and version, an installation identifier Google says is not meant to identify you, latency, and image format and resolution. Those metrics do not include camera images, barcode numbers, or anything you log. Google documents no supported switch to turn that off.</p>
+  <p>Ideas for next time, when that entry is shown, match a name on the phone. It does not change the food you just saved and does not upload the suggestion.</p>
+
+  <h2>Weight</h2>
+  <p>A weigh-in you type, and a body weight you import from Health Connect, are stored in your weight log on the server. An imported day is labeled Health Connect. The log keeps earlier rows for the same day. There is no separate delete for one weigh-in. Deleting your account removes the weight log. The kilogram or pound choice stays on the phone and is not uploaded. The background-sync switch and the time it last ran stay on the phone until a confirmed account deletion, which turns the switch off and clears that time. They are not uploaded.</p>
+  <p>Plan shows a weight-trend card on the usual build. While you are signed in, the phone sends recent weigh-ins and food totals for that check once, and again if you tap Check again. When the feature is disabled, the server rejects the check with FEATURE_DISABLED and does not store the request.</p>
+
+  <h2>Steps and Health Connect</h2>
+  <p>The app can read step totals and body weight from Health Connect. It never writes to Health Connect. Steps on the Health Data screen stay on this phone and are not uploaded.</p>
+  <p>Today's target uses steps only after you turn on step sharing. Then the app sends your daily step totals for the last 17 completed days, and the names of the apps that recorded them, to its server. The server uses them only for that calculation and does not store them. The phone does not keep those totals or app names either. You can turn step sharing off. The on-phone record that you turned it on holds no step totals.</p>
+  <p>With background sync on, and with step sharing already on, the same kind of calculation can run in the background. Those step totals are still not stored on the server or on this phone.</p>
+  <p>Today's calorie target can stay on this phone so the app can show it without sending steps again. That file does not include the daily step totals or the source app names. Signing out removes it. A confirmed account deletion removes it too.</p>
+
+  <h2>Recipe scan</h2>
+  <p>Scan recipe, when that entry is shown, takes one photo and reads the text on this phone. The photo is not written to a file, the gallery, or the server. The recognized text is not uploaded. A line is saved only after you confirm a food, as a normal saved meal. The usual build hides Scan recipe. ML Kit usage metrics are the same as for barcode scanning, and they do not include the photo.</p>
+
+  <h2>Deletion</h2>
+  <p>Settings → Delete all food logs deletes every food log entry and every saved meal on the account. It asks first. Food is not kept on this phone, so delete all food removes no on-device food file. It does not remove the saved plan, the weight log, the encrypted baseline history, the pending-save file, the cached today's calorie target, the weight-trend apply choice, the background-sync switch, or a downloaded copy of your data.</p>
+  <p>Settings → Delete account deletes the account. The server then removes the data stored for that account, including the saved plan, the food log, saved meals, and the weight log. On the phone, a confirmed deletion removes that account's encrypted baseline history, pending-save file, upgrade reminder, food-log notice, step-sharing on/off marker, cached today's calorie target, weight-trend apply choice and last suggested calories, background-sync switch and the time it last ran, and a downloaded copy of your data. It also cancels the scheduled Health Connect pass. The kilogram or pound choice stays on the phone. If the phone cannot finish that local cleanup, it says so and keeps the history locked until cleanup completes. Signing out does not remove the encrypted baseline history or the pending-save file.</p>
+  <p>Signing out removes the downloaded copy of your data and that account's cached today's calorie target. Opening the app removes a downloaded copy left from an earlier session. Opening the app while signed out also removes a cached today's calorie target left on the phone. It leaves the encrypted baseline history, the pending-save file, the weight-trend apply choice, the background-sync switch, and the kilogram or pound choice. A rejected account deletion, or a local retry before the server deletion is confirmed, leaves those on-device records in place.</p>
+
+  <h2>Download my data</h2>
+  <p>Signed-in Settings → Download my data saves a JSON copy of the account data this server stores and opens the share sheet.</p>
+
+  <h2>What this draft does not do</h2>
+  <p>This draft does not fill in a Google Play Data Safety form. The operator still has to approve these words and publish the page at the URL the app opens.</p>
+</body>
+</html>
