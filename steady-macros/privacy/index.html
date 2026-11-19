@@ -12,9 +12,9 @@
 </head>
 <body>
   <h1>Steady Macros privacy policy</h1>
-  <p>Last updated: 2026-11-12.</p>
+  <p>Last updated: 2026-11-19.</p>
   <p>Steady Macros is published by Steady Habits. This page describes what the app does today. It is not legal advice. It is general wellness information, not medical advice, not a diagnosis, and not treatment. It is not a HIPAA notice, and the app does not claim HIPAA compliance.</p>
-  <p>Questions about this page: email Ryan.Tippetts@gmail.com.</p>
+  <p>Questions about this page: email steadyhabitsapps@gmail.com.</p>
 
   <h2>Account</h2>
   <p>Sign-in is Supabase Auth. You can create an account with an email and a password. A build that is set up for it can also offer Google or Apple sign-in. The phone keeps the sign-in session in encrypted storage on the device. Signing out leaves your saved plan and logs on the server. It leaves the encrypted baseline history and the pending-save file on the phone. It removes the downloaded copy of your data and this account's cached today's calorie target. Opening the app removes a downloaded copy left from an earlier session. Opening the app while signed out also removes a cached today's calorie target left on the phone.</p>
@@ -44,10 +44,14 @@
   <h2>Recipe scan</h2>
   <p>Scan recipe, when that entry is shown, takes one photo and reads the text on this phone. The photo is not written to a file, the gallery, or the server. The recognized text is not uploaded. A line is saved only after you confirm a food, as a normal saved meal. The usual build hides Scan recipe. ML Kit usage metrics are the same as for barcode scanning, and they do not include the photo.</p>
 
+  <h2>Nutrient suggestions</h2>
+  <p>Nutrient suggestions, when that entry is shown, ask the server for a summary of recent logged foods and ideas that might close common gaps. The server reads your food log for that check and does not store the request. Nothing is added to your log until you confirm a food. The usual build hides nutrient suggestions.</p>
+
   <h2>Deletion</h2>
   <p>Settings → Delete all food logs deletes every food log entry and every saved meal on the account. It asks first. Food is not kept on this phone, so delete all food removes no on-device food file. It does not remove your custom foods, the saved plan, the weight log, the encrypted baseline history, the pending-save file, the cached today's calorie target, the weight-trend apply choice, the background-sync switch, or a downloaded copy of your data.</p>
   <p>Settings → Delete account deletes the account. The server then removes the data stored for that account, including the saved plan, the food log, saved meals, custom foods, and the weight log. On the phone, a confirmed deletion removes that account's encrypted baseline history, pending-save file, upgrade reminder, food-log notice, step-sharing on/off marker, cached today's calorie target, weight-trend apply choice and last suggested calories, background-sync switch and the time it last ran, and a downloaded copy of your data. It also cancels the scheduled Health Connect pass. The kilogram or pound choice stays on the phone. If the phone cannot finish that local cleanup, it says so and keeps the history locked until cleanup completes. Signing out does not remove the encrypted baseline history or the pending-save file.</p>
   <p>Signing out removes the downloaded copy of your data and that account's cached today's calorie target. Opening the app removes a downloaded copy left from an earlier session. Opening the app while signed out also removes a cached today's calorie target left on the phone. It leaves the encrypted baseline history, the pending-save file, the weight-trend apply choice, the background-sync switch, and the kilogram or pound choice. A rejected account deletion, or a local retry before the server deletion is confirmed, leaves those on-device records in place.</p>
+  <p>You can also delete your account from <a href="https://rtiptip.github.io/steady-habits/steady-macros/delete-account/">this page</a>, including by email if you can't use the app.</p>
 
   <h2>Download my data</h2>
   <p>Signed-in Settings → Download my data saves a JSON copy of the account data this server stores, including your custom foods, and opens the share sheet.</p>
